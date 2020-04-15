@@ -482,6 +482,7 @@ default:
         - WebUIGeneralContext:
         - WebUILoginContext:
         - OccContext:
+        - WebUISharingContext:
 
     webUIComments:
       paths:
