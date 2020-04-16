@@ -180,3 +180,5 @@ Feature: admin storage settings
     When the user shares folder "local_storage1" with user "User One" using the webUI
     Then notifications should be displayed on the webUI with the text
       | Cannot set the requested share permissions for local_storage1 |
+   # And as "user1" folder "local_storage1" should exist
+    And as "user1" folder "local_storage1" should not exist
