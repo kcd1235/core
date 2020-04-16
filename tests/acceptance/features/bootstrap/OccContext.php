@@ -201,12 +201,12 @@ class OccContext implements Context {
 
 		$mountId = $this->featureContext->getStorageId($mountPoint);
 
-		$key = "sharing";
+		$key = "enable_sharing";
 
 		if ($setting) {
-			$value = "1";
+			$value = true;
 		} else {
-			$value = "0";
+			$value = false;
 		}
 
 		$this->invokingTheCommand(
