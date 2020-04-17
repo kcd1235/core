@@ -27,16 +27,14 @@ Feature: create local storage and enable read-only and sharing from the command 
     And the OCS status code should be "100"
     And as "user1" folder "local_storage1" should exist
 
-  Scenario: applicable user is able to share the file inside the top-level of read-only storage
+  Scenario: applicable user is able to share with read permissions the file inside the top-level of read-only storage
     When user "user0" shares file "/local_storage1/file-in-local-storage.txt" with user "user1" with permissions "read" using the sharing API
     Then the HTTP status code should be "200"
     And the OCS status code should be "100"
     And as "user1" file "file-in-local-storage.txt" should exist
 
-  Scenario: applicable user is not able to share the top-level of read-only storage
+  Scenario: applicable user is able to share with default permissions the file inside the top-level of read-only storage
     When user "user0" shares file "/local_storage1/file-in-local-storage.txt" with user "user1" using the sharing API
     Then the HTTP status code should be "200"
     And the OCS status code should be "100"
     And as "user1" file "file-in-local-storage.txt" should exist
-
-

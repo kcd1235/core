@@ -204,9 +204,9 @@ class OccContext implements Context {
 		$key = "enable_sharing";
 
 		if ($setting) {
-			$value = true;
+			$value = "true";
 		} else {
-			$value = false;
+			$value = "false";
 		}
 
 		$this->invokingTheCommand(
